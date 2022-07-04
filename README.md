@@ -1,0 +1,2 @@
+# RabbitMQ Microservice Example
+Simple example of RabbitMQ usage. Project consists of API with 2 requests: add and multiply, and 2 'microsevices' - one can handle addition, second one multiplication. API after receiving a requests sends a message, which is forwarded to proper microservice (note that there can be multiple instances of the same microservice open at the same time - RabbitMQ should balance the requests in that case). Then microservice responds to the API application, and user receives their response.
